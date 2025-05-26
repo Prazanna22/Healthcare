@@ -1,0 +1,183 @@
+.activity-feed {
+  background-color: #f5f7fa;
+  padding: 10px 20px;
+  border-radius: 16px;
+  margin: 0 20px;
+}
+
+.activity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.activity-header h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.activity-header p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #555;
+}
+
+/* Bar Chart Layout */
+.bar-chart {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.bar-day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bars-row {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  gap: 40px;
+}
+
+/* Base Bar Style */
+.bar {
+  width: 4px;
+  border-radius: 4px;
+  background-color: #5b4baf;
+}
+
+/* Bar Variants */
+.full {
+  height: 80px;
+}
+
+.float {
+  position: absolute;
+  top: 20px;
+  height: 50px;
+  background-color: #00e0ff;
+  left: 15px;
+}
+
+.mid {
+  height: 40px;
+  position: absolute;
+  top: 35px;
+  left: 30px;
+  background-color: #d3d3d3;
+}
+
+.short {
+  height: 25px;
+  background-color: #888;
+}
+
+.day-label {
+  margin-top: 6px;
+  font-size: 10px;
+  color: #555;
+}
+
+/* ------------------------ */
+/* Responsive Styles        */
+/* ------------------------ */
+
+/* Tablets (<= 768px) */
+@media (max-width: 768px) {
+  .bar-chart {
+    gap: 20px;
+  }
+
+  .bars-row {
+    gap: 30px;
+  }
+
+  .bar {
+    width: 3px;
+  }
+
+  .full {
+    height: 60px;
+  }
+
+  .float {
+    top: 15px;
+    height: 40px;
+    left: 10px;
+  }
+
+  .mid {
+    height: 30px;
+    top: 25px;
+    left: 20px;
+  }
+
+  .short {
+    height: 20px;
+  }
+
+  .day-label {
+    font-size: 9px;
+  }
+
+  .activity-header h3 {
+    font-size: 0.95rem;
+  }
+
+  .activity-header p {
+    font-size: 0.7rem;
+  }
+}
+
+/* Mobiles (<= 480px) */
+@media (max-width: 480px) {
+  .bar-chart {
+    gap: 15px;
+  }
+
+  .bars-row {
+    gap: 20px;
+  }
+
+  .bar {
+    width: 2px;
+  }
+
+  .full {
+    height: 50px;
+  }
+
+  .float {
+    top: 12px;
+    height: 30px;
+    left: 6px;
+  }
+
+  .mid {
+    height: 20px;
+    top: 20px;
+    left: 12px;
+  }
+
+  .short {
+    height: 15px;
+  }
+
+  .day-label {
+    font-size: 8px;
+  }
+
+  .activity-header h3 {
+    font-size: 0.875rem;
+  }
+
+  .activity-header p {
+    font-size: 0.675rem;
+  }
+}

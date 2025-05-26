@@ -1,0 +1,151 @@
+.calendar-view {
+    padding: 0px 20px;
+    border-radius: 12px;
+    margin: 0;
+  
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    flex-wrap: wrap;
+}
+
+.calendar-header h5 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.nav-arrows {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Calendar Grid */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1rem;
+    margin-bottom: 12px;
+}
+
+
+
+.day-column {
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.highlight-day {
+    background: #ededed;
+}
+
+.day-label {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.calendar-date {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.slots .slot {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 10px 0;
+    border-radius: 5px;
+    padding: 5px;
+}
+.slot {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 10px 0;
+  border-radius: 5px;
+  padding: 5px;
+  min-height: 24px;
+}
+
+
+.appointments {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    padding: 5px 10px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    flex: 1 1 250px;
+    box-sizing: border-box;
+}
+
+.card p {
+    font-size: 12px;
+    margin: 6px 5px;
+}
+
+.card h4 {
+    margin: 8px 5px;
+}
+
+.dentist {
+    background: #3734a9;
+    color: white;
+}
+
+.physio {
+    background: #ededed ;
+    
+}
+
+.dentist-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Responsive Typography */
+@media (max-width: 480px) {
+    .calendar-header h5 {
+        font-size: 14px;
+    }
+
+    .calendar-date {
+        font-size: 16px;
+    }
+
+    .card p {
+        font-size: 11px;
+    }
+
+    .card h4 {
+        font-size: 14px;
+    }
+    .calendar-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .calendar-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+
+}
+@media (max-width: 1158px) {
+    .calendar-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+
+}

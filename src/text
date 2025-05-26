@@ -1,0 +1,113 @@
+import React from "react";
+
+const DashboardMainContent = () => {
+  return (
+    <div className="dashboard-container">
+      <div className="dashboard-left">
+        <DashboardOverview />
+        <AnatomySection />
+        <HealthStatusCards />
+        <ActivityFeed />
+      </div>
+      <div className="dashboard-right">
+        <CalendarView />
+        <UpcomingSchedule />
+      </div>
+    </div>
+  );
+};
+
+const DashboardOverview = () => (
+  <div className="overview">
+    <h2>Dashboard</h2>
+  </div>
+);
+
+const AnatomySection = () => (
+  <div className="anatomy-section">
+    <img src="/anatomy-placeholder.png" alt="Anatomy" className="anatomy-image" />
+    <div className="label heart">Healthy Heart ❤️</div>
+    <div className="label leg">Healthy Leg 🦵</div>
+  </div>
+);
+
+const HealthStatusCards = () => (
+  <div className="health-cards">
+    {[
+      { label: "Lungs", color: "red" },
+      { label: "Teeth", color: "green" },
+      { label: "Bone", color: "red" },
+    ].map(({ label, color }) => (
+      <div key={label} className="health-card">
+        <h4>{label}</h4>
+        <div className={`status-bar ${color}`}></div>
+        <p className="date">Date: 26 Oct 2021</p>
+      </div>
+    ))}
+  </div>
+);
+
+const CalendarView = () => (
+  <div className="calendar">
+    <h3>October 2021</h3>
+    <div className="days">
+      {["Mon", "Tue", "Wed", "Thurs", "Fri", "Sat", "Sun"].map((day) => (
+        <div key={day} className="day">{day}</div>
+      ))}
+      {[...Array(7)].map((_, i) => (
+        <div key={i} className="slot">09:00</div>
+      ))}
+    </div>
+    <div className="appointment dentist">
+      <h4>Dentist</h4>
+      <p>09:00 - 11:00</p>
+      <p>Dr. Cameron Williamson</p>
+    </div>
+    <div className="appointment physio">
+      <h4>Physiotherapy</h4>
+      <p>11:00 - 12:00</p>
+      <p>Dr. Kevin Djones</p>
+    </div>
+  </div>
+);
+
+const UpcomingSchedule = () => (
+  <div className="schedule">
+    <h3>The Upcoming Schedule</h3>
+    <div>
+      <h4>On Thursday</h4>
+      <SimpleAppointmentCard title="Health checkup complete" time="11:00 AM" icon="💉" />
+      <SimpleAppointmentCard title="Ophthalmologist" time="14:00 PM" icon="👁️" />
+    </div>
+    <div>
+      <h4>On Saturday</h4>
+      <SimpleAppointmentCard title="Cardiologist" time="12:00 AM" icon="❤️" />
+      <SimpleAppointmentCard title="Neurologist" time="16:00 PM" icon="🧠" />
+    </div>
+  </div>
+);
+
+const SimpleAppointmentCard = ({ title, time, icon }) => (
+  <div className="appointment-card">
+    <span>{title}</span>
+    <span>{time}</span>
+    <span>{icon}</span>
+  </div>
+);
+
+const ActivityFeed = () => (
+  <div className="activity">
+    <h4>Activity</h4>
+    <p>3 appointments on this week</p>
+    <div className="bar-chart">
+      {[...Array(7)].map((_, i) => (
+        <div key={i} className="bar">
+          <div className="fill"></div>
+          <span>Mon</span>
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
+export default DashboardMainContent;
