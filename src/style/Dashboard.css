@@ -3,19 +3,20 @@
   display: flex;
   gap: 0px;
   flex-wrap: wrap;
-  height: 90vh;
-  
 }
 
 .dashboard-left {
   flex: 1;
   min-width: 300px;
   background-color: rgb(255, 255, 255);
+  padding-top: 4%;
 }
+
 .dashboard-right {
   flex: 1;
   min-width: 300px;
-   background-color: #f6faff;
+  background-color: #f6faff;
+  padding-top: 4%;
 }
 
 /* Overview */
@@ -24,21 +25,22 @@
   margin-bottom: 10px;
 }
 
-.dashboard-header{
+.dashboard-header {
   padding: 10px 20px 0 20px;
   margin: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.dashboard-header h3{
+
+.dashboard-header h3 {
   padding: 0;
   margin: 0;
-   font-size: 22px;
+  font-size: 22px;
   font-weight: 800;
 }
 
-.dashboard-header p{
+.dashboard-header p {
   padding: 0;
   font-size: 12px;
   font-weight: 500;
@@ -47,7 +49,8 @@
   gap: 6px;
   margin: 0;
 }
-.dashboard-overview{
+
+.dashboard-overview {
   display: flex;
   gap: 20px;
   justify-content: center;
@@ -55,63 +58,56 @@
   padding: 20px;
 }
 
+@media (max-width: 1124px) {
 
-/* Activity Feed */
-/* .activity {
-  background: #f9f9f9;
-  padding: 15px;
-  border-radius: 10px;
-  margin-top: 20px;
+  .dashboard-right,
+  .dashboard-left {
+
+    padding-top: 6%;
+  }
 }
 
-.bar-chart {
-  display: flex;
-  gap: 5px;
-  margin-top: 10px;
+@media (max-width: 480px) {
+  .dashboard-header {
+    padding-top: 6%;
+  }
 }
 
-.bar {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.fill {
-  width: 10px;
-  height: 40px;
-  background: #4e6cfb;
-  border-radius: 4px;
-  margin-bottom: 4px;
-} */  
-
-/* Responsive Layout */
 @media (max-width: 600px) {
-  .dashboard-overview  {
+  .dashboard-overview {
     flex-direction: column;
     align-items: center;
   }
 
-  
+  .dashboard-right,
+  .dashboard-left {
+
+    padding-top: 6%;
+  }
 }
+
 @media (max-width: 900px) {
   .dashboard-container {
-    flex-direction: column; 
+    flex-direction: column;
     gap: 20px;
+    background-color: #f6faff;
   }
 
   .dashboard-left,
   .dashboard-right {
     min-width: 100%;
-     padding: 20px 0;
-     background-color: #f6faff;
+    padding: 20px 0;
+    background-color: #f6faff;
   }
-  .dashboard-left{
-   padding-bottom: 20px;
+
+  .dashboard-left {
+    padding-bottom: 20px;
+  }
+
+  .dashboard-right,
+  .dashboard-left {
+
+    padding-top: 9%;
   }
 
 }
-
-
-
-

@@ -2,7 +2,7 @@
     padding: 0px 20px;
     border-radius: 12px;
     margin: 0;
-  
+
 }
 
 .calendar-header {
@@ -23,7 +23,6 @@
     font-size: 18px;
 }
 
-/* Calendar Grid */
 .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -62,13 +61,21 @@
     border-radius: 5px;
     padding: 5px;
 }
+
 .slot {
-  font-size: 14px;
-  font-weight: 500;
-  margin: 10px 0;
-  border-radius: 5px;
-  padding: 5px;
-  min-height: 24px;
+    background-color: #f3f4f6;
+    padding: 6px 10px;
+    margin: 4px 0;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
+
+.highlight-slot {
+    background-color: #3734a9;
+    color: white;
+    font-weight: bold;
 }
 
 
@@ -102,8 +109,8 @@
 }
 
 .physio {
-    background: #ededed ;
-    
+    background: #ededed;
+
 }
 
 .dentist-title {
@@ -112,7 +119,6 @@
     align-items: center;
 }
 
-/* Responsive Typography */
 @media (max-width: 480px) {
     .calendar-header h5 {
         font-size: 14px;
@@ -129,23 +135,25 @@
     .card h4 {
         font-size: 14px;
     }
+
     .calendar-grid {
         grid-template-columns: repeat(4, 1fr);
     }
-    
+
 }
 
 @media (max-width: 768px) {
     .calendar-grid {
         grid-template-columns: repeat(4, 1fr);
     }
-    
+
 
 }
+
 @media (max-width: 1158px) {
     .calendar-grid {
         grid-template-columns: repeat(4, 1fr);
     }
-    
+
 
 }

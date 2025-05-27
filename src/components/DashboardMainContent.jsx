@@ -14,7 +14,6 @@ const DashboardMainContent = () => {
           <h3>Dashboard</h3>
           <p>This Week <IoIosArrowDown /></p>
         </div>
-        {/* <DashboardOverview /> */}
         <div className="dashboard-overview">
           <AnatomySection />
           <HealthStatusCards />

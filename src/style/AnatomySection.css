@@ -26,7 +26,7 @@
   border-radius: 8px;
 }
 
-/* Label Styling */
+
 .label {
   position: absolute;
   background-color: #fff;
@@ -38,7 +38,7 @@
   z-index: 1;
 }
 
-/* Arrows */
+
 .label::after {
   content: "";
   position: absolute;
@@ -47,7 +47,6 @@
   border: 6px solid transparent;
 }
 
-/* Position each label and its arrow */
 .leg {
   top: 55%;
   left: 15%;
@@ -76,9 +75,6 @@
   border-right-color: #ff0000;
 }
 
-
-
-/* Responsive */
 @media (max-width: 600px) {
   .anatomy-container {
     max-width: 100%;

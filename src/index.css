@@ -8,14 +8,11 @@ body{
  }
 .layout {
   display: flex;
-  height: calc(100vh - 62px); 
-  /* 60px = header height */
+  height: 100vh; 
   position: relative;
 }
 
 .main-content {
   flex: 1;
-  overflow: auto; /* if needed internally */
-  padding: 0px;
-  background-color: #f5f7fb;
-}
+  overflow: auto; 
+  padding: 0px;}

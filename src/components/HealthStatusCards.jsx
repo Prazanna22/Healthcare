@@ -1,4 +1,3 @@
-import React from "react";
 import '../style/HealthStatusCards.css';
 
 export const HealthStatusCards = () => (

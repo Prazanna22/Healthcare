@@ -61,6 +61,13 @@ const getSlots = (day) => {
     Sun: ['09:00', '10:00', '11:00'],
   };
 
+  const highlighted = {
+    Tues: ['09:00'],
+    Thurs: ['11:00'],
+    Sat: ['12:00'],
+    Sun: ['09:00']
+  };
+
   const slots = data[day] || [];
   const filledSlots = [...slots];
 
@@ -68,10 +75,16 @@ const getSlots = (day) => {
     filledSlots.push('–');
   }
 
-  return filledSlots.map((time, i) => (
-    <div className="slot" key={i}>{time}</div>
-  ));
+  return filledSlots.map((time, i) => {
+    const isHighlighted = highlighted[day]?.includes(time);
+    return (
+      <div className={`slot ${isHighlighted ? 'highlight-slot' : ''}`} key={i}>
+        {time}
+      </div>
+    );
+  });
 };
+
 
 
 

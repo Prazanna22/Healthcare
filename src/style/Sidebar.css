@@ -1,23 +1,24 @@
 .layout {
   display: flex;
   position: relative;
+  height: 100vh;
 }
 
 .sidebar {
   width: 180px;
   background-color: #f6faff;
   padding: 20px;
-  /* box-shadow: 2px 0 10px rgba(0,0,0,0.05); */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transition: transform 0.3s ease;
-  
+  padding-top: 5%;
+
 }
 
 .icon {
   display: flex;
-  align-items: center;
+  align-items: start;
 }
 
 .icon span {
@@ -31,8 +32,34 @@
   margin-bottom: 30px;
 }
 
-.logo span {
-  color: #00c0ff;
+.sidebar-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #0000;
+  padding: 1px;
+}
+
+.sidebar-profile img {
+  width: 32px;
+  height: 32px;
+  background: #48d7e1;
+  border-radius: 10px;
+}
+
+.sidebar-profile p {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.role {
+  font-size: 12px;
+  color: #777;
 }
 
 .section-title {
@@ -80,10 +107,7 @@
   background-color: #e4f0ff;
 }
 
-/* Main content */
 
-
-/* Overlay */
 .overlay {
   position: fixed;
   top: 0;
@@ -94,12 +118,10 @@
   z-index: 99;
 }
 
-
-/* Close button (mobile only) */
 .close-btn {
   display: none;
   position: absolute;
-  top: 15px;
+  top: 10px;
   right: 15px;
   background: none;
   border: none;
@@ -118,8 +140,8 @@
   display: none;
   flex-direction: column;
   justify-content: start;
-  gap: 5px;
-  padding: 0;
+  gap: 0px;
+  padding: 0px;
 }
 
 @media (max-width: 768px) {
@@ -128,7 +150,6 @@
   }
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
   .close-btn {
     display: block;
@@ -141,13 +162,27 @@
     height: 100vh;
     z-index: 100;
     transform: translateX(0);
+
   }
 
   .sidebar.open {
     left: 0;
     transform: translateX(0);
+
   }
 
+  .sidebar-section li {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 5px 0;
+    padding: 8px 5px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 10px;
+    cursor: pointer;
+
+  }
 
 
   .main-content {
@@ -155,6 +190,39 @@
   }
 
   .settings {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
+
+  .search-container {
+    position: relative;
+    width: 100px;
+    margin-top: 10px;
+  }
+
+  .search {
+    padding: 8px 40px 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 170px;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  .search-button {
+    position: absolute;
+    top: 50%;
+    left: 132px;
+    transform: translateY(-50%);
+    background-color: #3734a9;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .search-button:hover {
+    background-color: #1b45d9;
+  }
+
 }
