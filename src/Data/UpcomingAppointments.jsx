@@ -1,4 +1,4 @@
-export const UpcomingAppointments = [
+export const upcomingAppointments = [
   {
     day: "Thursday",
     items: [
